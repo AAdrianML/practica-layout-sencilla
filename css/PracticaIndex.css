@@ -1,0 +1,191 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*con esto hacemos que al momento de poner medidas el padding este incluido en esas medidas
+	y no sea mas grande*/
+	-webkit-box-sizing: border-box;/*para navegadores en especifico*/
+	-moz-box-sizing: border-box;/*para navegadores en especifico*/
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Arial, Sans-serif;
+	font-size: 16px;
+	background: #4a465b;
+}
+
+.contenedor{
+	width: 90%;
+	/*esto lo hago para que no se vea feo estando muy grande*/
+	max-width: 1000px;
+
+	margin: 20px auto;
+	/*para poder utilizar el float: left; se ocupa poner este comando en el contenedor
+	padre*/
+	overflow: hidden;
+}
+
+header{
+background: #fff;
+}
+
+header nav{
+	/*indicamos que el menu abarca el 100% del espacio disponible*/
+	width: 100%
+}
+
+/*indicamos que la lista desordenada abarca el 100% del espacio disponible*/
+header nav ul{
+	width: 100%;
+	/*linea para arreglar el error con float:left*/
+	overflow: hidden;
+	/*quitar los puntos o cualquier estilo que tenga*/
+	list-style: none;
+}
+
+header nav ul li{
+	/*hacer que los componenetes de la lista se agrupen de iza a derecha para esto hay dos
+	maneras de ahcerlo(ponerse todos a un lado del otro)*/
+	/*1ra*/
+	/*con esta opcion siempre hay un error, para corregirlo ocupamos ir al contenedor
+	padre de este, en este caso es ul con: overflow: hidden;*/
+	float: left;
+	/*2da*/
+	/*display: inline-block;*/
+}
+
+/*acceder a los enlaces de los elementos de la lista*/
+header nav ul li a{
+	/*quitar el subrayado o cualquier estilo previo*/
+	text-decoration: none;
+	/*darle las propiedades del bloque a los componenetes line*/
+	display: inline-block;
+	/*margen interiror*/
+	padding: 15px 20px;
+	color: #000;
+}
+/*para que haga cosas cuando pongo el cursor sobre los componentes */
+header nav ul li a:hover{
+background: #000;
+color: #fff;
+}
+
+/*acceder a la seccion main*/
+.main {
+	width: 70%;
+	background: #fff;
+	/*para poder agregar componentes a los lados*/
+	float: left;
+}
+
+/*acceder al div contenedor de la imagen*/
+.main .imagen{
+	width: 100%;
+}
+/*acceder a la pura imagen*/
+.main .imagen img{
+	width: 100%;
+	/*eliminar un pequenio margen que tiene*/
+	vertical-align: top;
+}
+
+/*acceder a la seccion llamada post con los articulos*/
+.main .posts{
+	padding: 40px;
+}
+/*acceder al titulo h2 del articulo*/
+.main .posts article h2{
+	/*margen exterior pero solo abajo*/
+	margin-bottom: 20px;
+	color: #424242;
+	text-align: center;
+}
+/*ahora toca acceder a los parrafos del articulo*/
+.main .posts article p {
+margin-bottom: 15px;
+/*espaciado de cada renglon*/
+ line-height: 27px;
+ text-align: justify;
+}
+
+aside{
+	width: 30%;
+	background: #161f26;
+	padding: 20px;
+	color: #fff;
+	/*agregar componentes a los lados*/
+	float: left;
+
+}
+
+/*acceder al widget(un contenedor div con los dos componentes del aside)*/
+aside .widget{
+	margin-bottom: 20px;
+}
+
+aside .widget .titulo{
+	color: #ff8000;
+	/*agregar una linea debajo del titulo se ve muy bien*/
+	border-bottom: 1px solid #ff8000;
+	margin-bottom: 10px;
+}
+
+/*entrar a la lista desordenada del widget*/
+aside .widget ul{
+	list-style: none;
+}
+/*entrar a los componenetes de la lista desordenada del widget*/
+aside .widget ul li{
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+	padding: 10px 0px;
+}
+/*acceder pero ahora a los enlaces*/
+aside .widget ul li a{
+color: #fff;
+text-decoration: none;
+
+}
+
+aside .widget ul li a:hover{
+	color: #8f8f8f;
+}
+
+aside .widget p{
+	/*espaciado de cada renglon*/
+	line-height: 27px;
+	text-align: justify;
+}
+
+footer{
+	width: 70%;
+	/*para que se ponga abajo*/
+	/*overflow: hidden; esta es una opcion pero tambien esta:*/
+	/*esta sirve para empezar en otra linea*/
+	clear: both;
+	background: #000;
+	color: #fff;
+	padding: 15px 0;
+	/*alinear el texto*/
+	text-align: center;
+}
+
+/*Mediaqueries. son los que ajustan el tamanio de la pagina cuando es muy pequenia*/
+/*cambia cosas en la pagina si el alcho es 800px o menos  */
+/*si yo quisiera que fuera de equis cantidad para arriba es con: @media screen and (min-width:900px){}*/
+/*se puede editar todo el contenido con esta mediaqueries*/
+@media screen and (max-width:900px){
+		.main{
+			width: 100%;
+		}
+
+		aside{
+			width: 100%;
+
+		}
+
+		footer{
+			width:100%;
+		}
+
+	
+}

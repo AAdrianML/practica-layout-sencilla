@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--index es el primer archivo que carga nuestra pagina web-->
+<head>
+	<meta charset="utf-8">
+
+	<!--aqui si voy a utilizar esta funcion meta llamada viewport (este meta se ocupa para todos los sitios que quiera hacer adaptables)-->
+	<!--
+		content="widrh=device-width : se ajusta al largo del dispositivo
+		user-scalable=no : que el usuario no puede cambiar el tamanio del sitio web
+		initial-scale=1.0 : escala inicial 1
+		maximun-scale=1.0,minimun-scale=1.0 : escala minima y maxima de 1
+	-->
+	<meta  name="viewport" content="widrh=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0,minimun-scale=1.0">
+
+	<link rel="shorcut icon" type="image/x-icon" href="imagenes/favicon.ico">
+	<title>Practica layout sencillo</title>
+	<link rel="stylesheet" type="text/css" href="css/PracticaIndex.css">
+</head>
+<body>
+	<!--esta pensado que esta div tenga todos los componentes, una ventaja de hacer eso es centrar la pagina o editar todos los componentes al mismo tiempo para editar cosas que tengan en comun-->
+	<div class="contenedor">
+		<!--encabezado, en este caso va a ser un menu-->
+		<header>
+			<!--etiqueta para indicar que es un menu-->
+			<nav>
+				<!--lista desordenada-->
+				<ul>
+					<!--elementos de la lista, tambien puse enlaces dentro del li-->
+					<li ><a href="#">Inicio</a></li>
+					<li ><a href="#">Acerca de</a></li>
+					<li ><a href="#">Productos</a></li>
+					<li ><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+
+		</header>
+		<!--una seccion dentro del div principal, esta seccion es la principal-->
+		<section class="main">
+			<!--pongo una imagen dentro de un div-->
+			<div class="imagen"> <img src="imagenes/los4.jpg"></div>
+			<!--nueva seccion tambien detro del div principal y dentro de la seccion anterior donde esta la imagen-->
+			<section class="posts">
+				<!--inidicamos con esta etiqueta que lo siguiente es un articulo-->
+				<article>
+					<h2>Titulo del articulo</h2>
+					<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+
+					<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<!--si quiera pegar otro post puedo hacer otro article debajo de este pero sin salir de la section-->
+				</article>
+
+			</section>
+
+		</section>
+		<!--vamos a agregar la barra lateral con aside-->
+		<aside>
+			<!--estamos creando un div dentro dek aside para crear la barra lateral-->
+			<div class="widget">
+				<!--el titulo-->
+				<h3 class="titulo">Articulos destacados</h3>
+				<!--la lista desordenada-->
+				<ul>
+					<!--componentes de la lista desordenada y poner un <a> para usar enlaces en esas opciones-->
+					<li><a href="#">Lore ipsum dolor sit amet</a></li>
+					<li><a href="#">Lore ipsum dolor sit amet</a></li>
+					<li><a href="#">Lore ipsum dolor sit amet</a></li>
+					<li><a href="#">Lore ipsum dolor sit amet</a></li>
+					<li><a href="#">Lore ipsum dolor sit amet</a></li>
+				</ul>
+			</div>
+				<!--un segundo widget-->
+			<div class="widget">
+				<!--el titulo-->
+				<h3 class="titulo">Articulos destacados parte 2 informacion</h3>
+				<!--informacion dentro de un p de parrafo-->
+				<p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+
+
+			</div>
+		</aside>
+
+		<!--ahora le toca al pie de pagina-->
+		<footer>
+			<p>texto para el footer o pie de pagina como el autor, copyright y todo eso</p>
+		</footer>
+	</div>
+
+</body>
+</html>
